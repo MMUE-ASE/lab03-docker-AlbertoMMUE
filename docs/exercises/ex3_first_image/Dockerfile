@@ -11,24 +11,25 @@
 #       Form: FROM <image>:<tag>     Hint: ubuntu:24.04
 #
 # YOUR INSTRUCTION HERE
-
+FROM ubuntu:24.04
 
 # T2 — COPY the greet.sh script from this folder into the image at /greet.sh.
 #       Form: COPY <source-on-host> <destination-in-image>
 #       Hint: COPY greet.sh /greet.sh
 #
 # YOUR INSTRUCTION HERE
-
+COPY greet.sh /greet.sh
 
 # T3 — Make the script executable, as a build step.
 #       Form: RUN <command>
 #       Hint: RUN chmod +x /greet.sh
 #
 # YOUR INSTRUCTION HERE
-
+RUN chmod +x /greet.sh
 
 # T4 — Set the default command to run the script when a container starts.
 #       Form: CMD ["<executable>", "<arg>", ...]
 #       Hint: CMD ["/greet.sh"]
 #
 # YOUR INSTRUCTION HERE
+CMD ["/greet.sh"]
